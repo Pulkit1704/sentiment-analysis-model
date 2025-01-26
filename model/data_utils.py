@@ -2,7 +2,7 @@ import tensorflow as tf
 
 
 def load_data(filepath: str, train_test_ratio: float): 
-    data = tf.data.Dataset.load(filepath) 
+    data = tf.data.Dataset.load(filepath, compression = "GZIP") 
 
     return train_test_validation_split(data, train_test_ratio) 
 
